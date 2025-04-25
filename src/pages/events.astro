@@ -1,0 +1,50 @@
+---
+// Import the React component
+import BookwhenEvents from '../components/BookwhenEvents';
+import Layout from '../layouts/Layout.astro';
+
+// Get API key from environment variable - check multiple possible names
+const apiKey = import.meta.env.PUBLIC_BOOKWHEN_KEY ||
+               import.meta.env.BOOKWHEN_KEY ||
+               import.meta.env.PUBLIC_BOOKWHEN_API_KEY ||
+               import.meta.env.BOOKWHEN_API_KEY;
+
+// Filter options for events (modify as needed)
+const today = new Date();
+const year = today.getFullYear();
+const month = String(today.getMonth() + 1).padStart(2, '0');
+const day = String(today.getDate()).padStart(2, '0');
+const formattedToday = `${year}${month}${day}`;
+
+const filterOptions = {
+  // Show events from today onwards in Bookwhen's required format (YYYYMMDD)
+  from: formattedToday,
+};
+---
+
+<Layout title="Our Events">
+  <main>
+    <h1 class="text-4xl font-bold text-center my-8">Upcoming Events</h1>
+
+    <div class="container mx-auto px-4 mb-8">
+      <!-- You could add filter UI elements here -->
+    </div>
+
+    <!-- Bookwhen Events Component with proper authentication -->
+    <div class="container mx-auto px-4">
+      <BookwhenEvents
+        apiKey={apiKey}
+        limit={6}
+        filter={filterOptions}
+        client:load
+      />
+    </div>
+  </main>
+</Layout>
+
+<script>
+  // This would be where you could add client-side filtering if needed
+  document.addEventListener('DOMContentLoaded', () => {
+    console.log('Events page loaded');
+  });
+</script>

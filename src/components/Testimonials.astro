@@ -1,25 +1,26 @@
 ---
+import WaveDivider from '../components/WaveDivider';
 const testimonials = [
   {
-    content: "This platform has completely transformed how we manage our projects. The intuitive interface and powerful features have increased our team's productivity by over 40%.",
-    author: "Sarah Johnson",
-    position: "Product Manager",
-    company: "TechCorp",
+    content: "The instructors at McKenna's gave me confidence I never thought possible. I'm now sailing solo with complete ease!",
+    author: "Sarah J",
+    position: "Activities manager",
+    company: "South West Leisure",
     avatar: "https://randomuser.me/api/portraits/women/32.jpg"
   },
   {
-    content: "I've tried many SaaS solutions, but this one stands out for its ease of use and comprehensive feature set. The customer support is also exceptional.",
-    author: "Michael Chen",
-    position: "CTO",
-    company: "Innovate Inc.",
-    avatar: "https://randomuser.me/api/portraits/men/46.jpg"
+    content: "Brilliant tutors who adapt to all abilities. Their patient approach transformed my dinghy skills dramatically.",
+    author: "Michael C",
+    position: "Sailing enthusiast",
+    company: "Southampton Boating Club",
+    avatar: "https://randomuser.me/api/portraits/men/52.jpg"
   },
   {
-    content: "The analytics capabilities alone are worth the investment. We've gained valuable insights that have helped us optimize our operations and reduce costs.",
-    author: "Emily Rodriguez",
-    position: "Operations Director",
-    company: "Global Solutions",
-    avatar: "https://randomuser.me/api/portraits/women/65.jpg"
+    content: "McKenna's expert guidance had me mastering challenging tides within days. Worth every penny for the quality instruction!",
+    author: "Emily R",
+    position: "Lance Corporal",
+    company: "Army Reserves",
+    avatar: "https://randomuser.me/api/portraits/women/15.jpg"
   }
 ];
 ---
@@ -28,18 +29,18 @@ const testimonials = [
   <div class="container-custom">
     <div class="text-center max-w-3xl mx-auto mb-16">
       <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-secondary-900 text-secondary-600 dark:text-secondary-300 font-medium text-sm mb-4">
-        Customer Stories
+        Our feedback
       </span>
-      <h2 class="mb-6 text-gray-900 dark:text-white">What Our Clients Say</h2>
+      <h2 class="mb-6 text-gray-900 dark:text-white">Skills training success stories</h2>
       <p class="text-gray-600 dark:text-gray-300">
-        Don't just take our word for it. Here's what our customers have to say about their experience with our platform.
+        Don't just take our word for it. Here's what our people have to say about their experience with Seabreeze training
       </p>
     </div>
-    
+
     <div class="grid md:grid-cols-3 gap-8">
       {testimonials.map((testimonial, index) => (
-        <div 
-          class="card p-6 border border-gray-200 dark:border-gray-700 slide-up" 
+        <div
+          class="card p-6 border border-gray-200 dark:border-gray-700 slide-up"
           style={`animation-delay: ${index * 150}ms`}
         >
           <div class="mb-6">
@@ -49,13 +50,13 @@ const testimonials = [
               </svg>
             ))}
           </div>
-          
+
           <blockquote class="mb-6 text-gray-700 dark:text-gray-300 italic">"{testimonial.content}"</blockquote>
-          
+
           <div class="flex items-center">
-            <img 
-              src={testimonial.avatar} 
-              alt={testimonial.author} 
+            <img
+              src={testimonial.avatar}
+              alt={testimonial.author}
               class="w-12 h-12 rounded-full mr-4 object-cover"
               loading="lazy"
             />
@@ -67,8 +68,8 @@ const testimonials = [
         </div>
       ))}
     </div>
-    
-    <div class="mt-16 bg-linear-to-r from-primary-500 to-secondary-500 rounded-2xl p-8 md:p-12 relative overflow-hidden">
+
+    <!--<div class="mt-16 bg-linear-to-r from-primary-500 to-secondary-500 rounded-2xl p-8 md:p-12 relative overflow-hidden">
       <div class="absolute inset-0 bg-linear-to-r from-primary-600/30 to-secondary-600/30 backdrop-blur-xs"></div>
       <div class="relative z-10 text-center md:text-left md:flex items-center justify-between">
         <div class="mb-6 md:mb-0 md:mr-8">
@@ -81,7 +82,9 @@ const testimonials = [
             <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
           </svg>
         </a>
-      </div>
+      </div>-->
     </div>
   </div>
+    <!-- Wave Divider at bottom of section -->
+    <WaveDivider className="mt-12" />
 </section>

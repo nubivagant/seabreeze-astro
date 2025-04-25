@@ -1,0 +1,41 @@
+---
+// A simple debug page with no complex code examples
+import DebugBookwhenEvents from '../components/DebugBookwhenEvents';
+import Layout from '../layouts/Layout.astro';
+
+// Get API key from environment variable
+const apiKey = import.meta.env.PUBLIC_BOOKWHEN_KEY ||
+               import.meta.env.BOOKWHEN_API_KEY;
+
+// Log environment variables
+const envVars = Object.keys(import.meta.env).filter(key =>
+  key.includes('BOOKWHEN') || key.includes('KEY')
+);
+---
+
+<Layout title="Debug Bookwhen API">
+  <main class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-6">Bookwhen API Debugging</h1>
+
+    <div class="mb-8 p-4 bg-gray-100 rounded">
+      <h2 class="text-xl font-bold mb-3">Environment Variables:</h2>
+      <pre class="bg-white p-3 rounded">{JSON.stringify(envVars, null, 2)}</pre>
+    </div>
+
+    <DebugBookwhenEvents apiKey={apiKey} client:load />
+
+    <div class="mt-8 p-4 bg-blue-100 rounded">
+      <h2 class="text-xl font-bold mb-3">Setup Instructions:</h2>
+      <ol class="list-decimal pl-6 space-y-2">
+        <li>Make sure your .env file is in the root directory of your Astro project</li>
+        <li>Use <code>PUBLIC_BOOKWHEN_KEY=your_key_here</code> in your .env file</li>
+        <li>Restart your Astro dev server after making changes</li>
+      </ol>
+    </div>
+
+    <div class="mt-8 p-4 bg-green-100 rounded">
+      <h2 class="text-xl font-bold mb-3">Authentication Method:</h2>
+      <p>This API uses Basic Authentication with the API key as username and blank password.</p>
+    </div>
+  </main>
+</Layout>

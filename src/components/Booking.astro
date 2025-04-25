@@ -1,0 +1,49 @@
+---
+// Import the CustomBookwhenEvents component
+import CustomBookwhenEvents from '../components/CustomBookwhenEvents';
+// Import the WaveDivider component
+import WaveDivider from '../components/WaveDivider';
+// Get API key from environment variable
+const apiKey = import.meta.env.PUBLIC_BOOKWHEN_KEY ||
+               import.meta.env.BOOKWHEN_API_KEY;
+// Format date correctly for Bookwhen API (YYYYMMDD)
+const today = new Date();
+const year = today.getFullYear();
+const month = String(today.getMonth() + 1).padStart(2, '0');
+const day = String(today.getDate()).padStart(2, '0');
+const formattedToday = `${year}${month}${day}`;
+// Filter options - show only upcoming events
+const filterOptions = {
+  from: formattedToday,
+  // Optional: Add specific tags if you want to filter by course type
+};
+---
+<section id="events" class="section relative pb-16">
+  <div class="container-custom">
+    <!-- Events listing -->
+    <div id="browse-courses" class="mt-12">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold mb-4">Upcoming courses</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Book your place on one of our exciting water activities and courses. Perfect for beginners and experienced adventurers alike.</p>
+      </div>
+      <!-- Bookwhen Events Component -->
+      <CustomBookwhenEvents
+        apiKey={apiKey}
+        limit={6}
+        filter={filterOptions}
+        client:load
+      />
+    </div>
+  </div>
+  <div class="mt-16 text-center">
+    <a href="/features" class="btn-accent">
+      View all of our upcoming courses and events
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+      </svg>
+    </a>
+  </div>
+
+  <!-- Wave Divider at bottom of section -->
+  <WaveDivider className="mt-12" />
+</section>

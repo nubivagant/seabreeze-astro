@@ -1,0 +1,43 @@
+---
+import { Image } from 'astro:assets';
+import sailingImage from '../assets/sailing1.jpg';
+---
+
+<section id="snippet" class="py-16 bg-white dark:bg-gray-800">
+  <div class="container-custom">
+    <!-- Case Study 2 -->
+    <div class="mb-24">
+      <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+        <div class="order-2 md:order-1 rounded-lg overflow-hidden shadow-xl">
+          <Image src={sailingImage} alt="Sailing" class="w-full h-auto" />
+        </div>
+        <div class="order-1 md:order-2">
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">About our sailing school</h2>
+          <p class="text-gray-600 dark:text-gray-300 mb-6">
+            With over 15 years of experience teaching water skills across the United Kingdom, we pride ourselves on top-quality instruction from certified experts who are passionate about sailing and water sports.
+          </p>
+          <div class="flex flex-wrap gap-4 mb-6">
+            <div class="flex items-center">
+              <svg class="w-5 h-5 text-primary-600 dark:text-primary-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700 dark:text-gray-300">Fully insured</span>
+            </div>
+            <div class="flex items-center">
+              <svg class="w-5 h-5 text-primary-600 dark:text-primary-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700 dark:text-gray-300">Certified instructors</span>
+            </div>
+            <div class="flex items-center">
+              <svg class="w-5 h-5 text-primary-600 dark:text-primary-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700 dark:text-gray-300">Equipment provided</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -3,17 +3,17 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-primary-50: #f5f3ff;
-  --color-primary-100: #ede9fe;
-  --color-primary-200: #ddd6fe;
-  --color-primary-300: #c4b5fd;
-  --color-primary-400: #a78bfa;
-  --color-primary-500: #8b5cf6;
-  --color-primary-600: #7c3aed;
-  --color-primary-700: #6d28d9;
-  --color-primary-800: #5b21b6;
-  --color-primary-900: #4c1d95;
-  --color-primary-950: #2e1065;
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-800: #1e40af;
+  --color-primary-900: #1e3a8a;
+  --color-primary-950: #172554;
 
   --color-secondary-50: #f8fafc;
   --color-secondary-100: #f1f5f9;
@@ -111,7 +111,7 @@
 }
 
 @utility btn-primary {
-  @apply btn bg-accent-400 hover:bg-accent-500 text-black shadow-md hover:shadow-lg;
+  @apply btn bg-primary-300 hover:bg-secondary-300 text-black shadow-md hover:shadow-lg;
 }
 
 @utility btn-secondary {
@@ -119,11 +119,11 @@
 }
 
 @utility btn-accent {
-  @apply btn bg-accent-500 hover:bg-accent-600 text-black shadow-md hover:shadow-lg;
+  @apply btn bg-accent-400 hover:bg-accent-600 text-black shadow-md hover:shadow-lg;
 }
 
 @utility btn-outline {
-  @apply btn border-2 border-secondary-300 dark:border-secondary-700 hover:bg-secondary-100 dark:hover:bg-secondary-800 text-secondary-900 dark:text-secondary-100;
+  @apply btn border-2 border-secondary-300 dark:border-secondary-700 hover:bg-secondary-100 dark:hover:bg-secondary-800 text-white dark:text-secondary-100;
 }
 
 @utility container-custom {
@@ -142,23 +142,23 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-display;
   }
-  
+
   h1 {
     @apply text-4xl md:text-5xl lg:text-6xl font-bold;
   }
-  
+
   h2 {
     @apply text-3xl md:text-4xl font-bold;
   }
-  
+
   h3 {
     @apply text-2xl md:text-3xl font-semibold;
   }
-  
+
   h4 {
     @apply text-xl md:text-2xl font-semibold;
   }
-  
+
   p {
     @apply text-base md:text-lg leading-relaxed;
   }
