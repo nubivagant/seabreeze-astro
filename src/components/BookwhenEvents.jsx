@@ -239,7 +239,7 @@ function EventCard({ event }) {
 
       <div className="p-6 pt-0">
         <a
-          href={`https://bookwhen.com/events/${event.id}`}
+          href={`https://bookwhen.com/seabreeze/e/${event.id}`}
           target="_blank"
           rel="noopener noreferrer"
           className={`block w-full text-center font-medium py-2 px-4 rounded transition-colors duration-300
