@@ -1,0 +1,76 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HeroSection from '../components/HeroSection.astro';
+import { Image } from 'astro:assets';
+import sailingImage from '../assets/sailing1.jpg';
+import declanImage from '../assets/declan.jpg';
+---
+
+<Layout title="About Seabreeze">
+  <Header />
+  <main>
+    <HeroSection
+      title="About Seabreeze"
+      highlightText="Seabreeze"
+      description="We're on a mission to deliver professional sailing and water skills instruction for all levels."
+    />
+
+    <section class="py-16 bg-white dark:bg-gray-800">
+      <div class="container-custom">
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
+          <div>
+            <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-secondary-900 text-secondary-600 dark:text-secondary-300 font-medium text-sm mb-4">
+              Our Story
+            </span>
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">How Seabreeze started</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              At Mckenna’s Seabreeze, our journey began with a simple goal: to help more people feel confident, capable, and connected on the water. What started as a handful of small group lessons for the armed forces along the south coast has grown into a trusted sailing and water skills school based in the heart of Southampton. Founded by experienced instructors with a deep love for the sea, Seabreeze was built on the belief that time on the water can be both empowering and life-changing—whether you’re setting sail for the first time or sharpening advanced techniques.
+            </p>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              With over 15 years of experience in the watersports industry, we’ve created a learning environment that’s welcoming, supportive, and professional. We offer a range of RYA-accredited courses, from dinghy sailing and powerboat training to classroom-based theory and safety courses. These are all delivered by passionate, certified instructors who know how to make learning enjoyable and effective.
+            </p>
+            <p class="text-gray-600 dark:text-gray-300">
+              Our values are simple: safety, confidence, and respect for the water. We take the time to get to know our learners, tailoring instruction to suit different abilities and learning styles. Whether you’re 8 or 80, we believe everyone should have access to high-quality, confidence-building experiences on the water.
+            </p>
+            <p class="text-gray-600 dark:text-gray-300">
+              Set against the stunning backdrop of the Royal Southampton Yacht Club, our training centre provides the ideal conditions for learning and adventure. At Seabreeze, you won’t just leave with a certificate, you’ll leave with new skills, confidence, and a deeper connection to the water.
+            </p>
+          </div>
+          <div class="rounded-lg overflow-hidden shadow-xl">
+            <Image src={sailingImage} alt="Sailing" class="w-full h-auto" />
+          </div>
+        </div>
+
+
+        <div class="mb-24">
+          <div class="text-center mb-12">
+            <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-secondary-900 text-secondary-600 dark:text-secondary-300 font-medium text-sm mb-4">
+              Our Team
+            </span>
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Meet Our Team</h2>
+            <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Our team of water professionals bring decades of experience and a shared passion for sailing.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center col-2">
+              <div class="rounded-full overflow-hidden w-32 h-32 mx-auto mb-4">
+                <Image src={declanImage} alt="Declan McKenna" class="w-full h-full object-cover" />
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-1">Declan McKenna</h3>
+              <p class="text-primary-600 dark:text-primary-400 mb-2">Seabreeze Founder</p>
+              <p class="text-gray-600 dark:text-gray-300 text-m">
+                With over 15 years of experience in the water sports industry, Declan founded Seabreeze to provide much needed training across the southwest.
+              </p>
+            </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

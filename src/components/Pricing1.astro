@@ -1,63 +1,74 @@
 ---
 const plans = [
   {
-    name: "RYA Dinghy Sailing Training",
-    description: "Dinghies are lightweight, easy to rig and launch, making them a great option for both beginners and more experienced sailors.",
-    age: "Adult & Youth",
+    name: "Starter",
+    price: 29,
+    description: "Perfect for small teams and startups",
     features: [
-      "Adult levels 1, 2 & 3",
-      "Youth Stages 1, 2, 3 & 4",
-      "Advanced courses: seamanship, day sailing, sailing with spinnakers"
+      "Up to 5 team members",
+      "10GB storage",
+      "Basic analytics",
+      "24/7 email support",
+      "API access"
     ],
-    cta: "Book your course",
-    popular: true,
+    cta: "Start Free Trial",
+    popular: false,
     color: "primary"
   },
   {
-    name: "RYA Powerboat Training",
-    description: "Perfect for short trips and exploring nearby waters, our powerboat courses help you make the most of your time on the water.",
-    age: "Adult",
+    name: "Professional",
+    price: 79,
+    description: "Ideal for growing businesses",
     features: [
-      "Powerboat level 1",
-      "Powerboat level 2",
-      "Safety boat training"
+      "Up to 20 team members",
+      "50GB storage",
+      "Advanced analytics",
+      "Priority support",
+      "API access",
+      "Custom integrations",
+      "Team collaboration tools"
     ],
-    cta: "Book your course",
+    cta: "Start Free Trial",
     popular: true,
-    color: "primary"
+    color: "secondary"
   },
   {
-    name: "RYA Courses Ashore",
-    description: "Build your confidence and deepen your knowledge with our classroom and online courses, to help you get qualified and feel more prepared.",
-    age: "Adult & Youth",
+    name: "Enterprise",
+    price: 199,
+    description: "For large organizations with complex needs",
     features: [
-      "Marine Radio VHF SRC – classroom or online",
-      "First aid – classroom",
-      "Safe and fun (safeguarding) – online"
+      "Unlimited team members",
+      "500GB storage",
+      "Enterprise analytics",
+      "Dedicated account manager",
+      "API access",
+      "Custom integrations",
+      "Team collaboration tools",
+      "Advanced security features",
+      "Custom branding"
     ],
-    cta: "Book your course",
-    popular: true,
-    color: "primary"
+    cta: "Contact Sales",
+    popular: false,
+    color: "accent"
   }
-
 ];
 ---
 
 <section id="pricing" class="section bg-gray-50 dark:bg-gray-800/50">
   <div class="container-custom">
-    <div class="text-center max-w-3xl mx-auto mb-16 mt-10">
+    <div class="text-center max-w-3xl mx-auto mb-16">
       <span class="inline-block px-4 py-1 rounded-full bg-accent-100 dark:bg-accent-900 text-accent-600 dark:text-accent-300 font-medium text-sm mb-4">
-        What we offer
+        Pricing Plans
       </span>
-      <h2 class="mb-6 text-gray-900 dark:text-white">Our training and courses</h2>
+      <h2 class="mb-6 text-gray-900 dark:text-white">Simple, Transparent Pricing</h2>
       <p class="text-gray-600 dark:text-gray-300">
-        Book your place on one of our exciting water activities and courses. Perfect for beginners and experienced adventurers alike.
+        Choose the plan that works best for your business. All plans include a 14-day free trial.
       </p>
     </div>
-
+    
     <div class="grid md:grid-cols-3 gap-8">
       {plans.map((plan, index) => (
-        <div
+        <div 
           class={`card p-6 border ${plan.popular ? `border-${plan.color}-500 dark:border-${plan.color}-400` : 'border-gray-200 dark:border-gray-700'} slide-up relative`}
           style={`animation-delay: ${index * 150}ms`}
         >
@@ -66,13 +77,14 @@ const plans = [
               Most Popular
             </div>
           )}
-
+          
           <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{plan.name}</h3>
           <div class="mb-4">
-            <span class="px-4 py-1 rounded-full bg-primary-200 text-blue-500 dark:text-gray-300 mb-6">{plan.age}</span>
+            <span class="text-4xl font-bold text-gray-900 dark:text-white">${plan.price}</span>
+            <span class="text-gray-500 dark:text-gray-400">/month</span>
           </div>
           <p class="text-gray-600 dark:text-gray-300 mb-6">{plan.description}</p>
-
+          
           <ul class="space-y-3 mb-8">
             {plan.features.map(feature => (
               <li class="flex items-start">
@@ -83,9 +95,9 @@ const plans = [
               </li>
             ))}
           </ul>
-
-          <a
-            href="https://bookwhen.com/seabreeze"
+          
+          <a 
+            href="#signup" 
             class={`w-full btn ${plan.popular ? `bg-${plan.color}-600 hover:bg-${plan.color}-700 text-white focus:ring-${plan.color}-500` : 'btn-outline'}`}
           >
             {plan.cta}
@@ -93,10 +105,10 @@ const plans = [
         </div>
       ))}
     </div>
-
+    
     <div class="mt-12 text-center">
-      <p class="text-gray-600 dark:text-gray-300 mb-2">Need custom or bespoke training for your specific needs?</p>
-      <a href="/" class="text-primary-600 dark:text-primary-400 font-medium hover:underline">Contact our team today</a>
+      <p class="text-gray-600 dark:text-gray-300 mb-2">Need a custom plan for your specific needs?</p>
+      <a href="/contact" class="text-primary-600 dark:text-primary-400 font-medium hover:underline">Contact our sales team</a>
     </div>
   </div>
 </section>
