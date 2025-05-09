@@ -7,11 +7,11 @@
         <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-secondary-900 text-secondary-600 dark:text-secondary-300 font-medium text-sm mb-4">
           Get In Touch
         </span>
-        <h2 class="mb-6 text-gray-900 dark:text-white">We'd Love to Hear From You</h2>
+        <h2 class="mb-6 text-gray-900 dark:text-white">We're here to help</h2>
         <p class="text-gray-600 dark:text-gray-300 mb-8">
-          Have questions about our platform or need help getting started? Our team is here to assist you every step of the way.
+          If you have any questions, want some advice on which course to book, or are looking for something more bespoke to meet your waterskills needs, reach out.
         </p>
-        
+
         <div class="space-y-6">
           <div class="flex items-start">
             <div class="shrink-0 mt-1">
@@ -21,10 +21,10 @@
             </div>
             <div class="ml-4">
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Email Us</h3>
-              <p class="text-gray-600 dark:text-gray-300">support@saasify.com</p>
+              <p class="text-gray-600 dark:text-gray-300">info@seabreezeskills.com</p>
             </div>
           </div>
-          
+
           <div class="flex items-start">
             <div class="shrink-0 mt-1">
               <svg class="w-6 h-6 text-secondary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -33,10 +33,10 @@
             </div>
             <div class="ml-4">
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Call Us</h3>
-              <p class="text-gray-600 dark:text-gray-300">+1 (555) 123-4567</p>
+              <p class="text-gray-600 dark:text-gray-300">+44 7516 761692</p>
             </div>
           </div>
-          
+
           <div class="flex items-start">
             <div class="shrink-0 mt-1">
               <svg class="w-6 h-6 text-secondary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -46,12 +46,12 @@
             </div>
             <div class="ml-4">
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Visit Us</h3>
-              <p class="text-gray-600 dark:text-gray-300">123 SaaS Street, Tech City, TC 12345</p>
+              <p class="text-gray-600 dark:text-gray-300">Royal Southampton yacht club, Gins Farm Clubhouse, St Leonards Cottages, Beaulieu, Brockenhurst SO42 7XG</p>
             </div>
           </div>
         </div>
-        
-        <div class="mt-8">
+
+        <!-- <div class="mt-8">
           <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Follow Us</h3>
           <div class="flex space-x-4">
             <a href="#" class="text-gray-500 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors" aria-label="Twitter">
@@ -75,53 +75,53 @@
               </svg>
             </a>
           </div>
-        </div>
+        </div> -->
       </div>
-      
-      <div class="slide-up" style="animation-delay: 150ms">
+
+      <!-- <div class="slide-up" style="animation-delay: 150ms">
         <div class="card p-6 border border-gray-200 dark:border-gray-700">
           <h3 class="text-xl font-semibold mb-6 text-gray-900 dark:text-white">Send Us a Message</h3>
-          
+
           <form x-data="{ name: '', email: '', message: '', submitted: false, errors: {} }">
             <div class="mb-4">
               <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Name</label>
-              <input 
-                type="text" 
-                id="name" 
+              <input
+                type="text"
+                id="name"
                 x-model="name"
                 class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-hidden focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400"
                 placeholder="Your name"
               />
               <p class="text-red-500 text-sm mt-1" x-show="errors.name" x-text="errors.name"></p>
             </div>
-            
+
             <div class="mb-4">
               <label for="contact-email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
-              <input 
-                type="email" 
-                id="contact-email" 
+              <input
+                type="email"
+                id="contact-email"
                 x-model="email"
                 class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-hidden focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400"
                 placeholder="Your email"
               />
               <p class="text-red-500 text-sm mt-1" x-show="errors.email" x-text="errors.email"></p>
             </div>
-            
+
             <div class="mb-6">
               <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Message</label>
-              <textarea 
-                id="message" 
+              <textarea
+                id="message"
                 x-model="message"
-                rows="5" 
+                rows="5"
                 class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-hidden focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400"
                 placeholder="Your message"
               ></textarea>
               <p class="text-red-500 text-sm mt-1" x-show="errors.message" x-text="errors.message"></p>
             </div>
-            
+
             <div x-show="!submitted">
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 class="w-full btn-primary"
                 x-on:click.prevent="
                   errors = {};
@@ -129,7 +129,7 @@
                   if (!email) errors.email = 'Please enter your email';
                   else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.email = 'Please enter a valid email';
                   if (!message) errors.message = 'Please enter your message';
-                  
+
                   if (Object.keys(errors).length === 0) {
                     submitted = true;
                   }
@@ -138,7 +138,7 @@
                 Send Message
               </button>
             </div>
-            
+
             <div class="text-center p-6 bg-primary-50 dark:bg-primary-900/30 rounded-lg" x-show="submitted" x-cloak>
               <svg class="w-12 h-12 text-primary-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -150,7 +150,7 @@
             </div>
           </form>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
