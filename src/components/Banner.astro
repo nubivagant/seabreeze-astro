@@ -1,0 +1,17 @@
+---
+
+import { Image } from 'astro:assets';
+import ryaLogo from '../assets/rya-logo.png';
+---
+<section id="banner" class="bg-white">
+
+  <div class="mt-4 bg-white p-12 md:p-12 relative overflow-hidden">
+    <div class="absolute inset-0 bg-white backdrop-blur-xs"></div>
+    <div class="relative z-10 text-center md:text-left md:flex items-center justify-between">
+      <div class="mb-6 md:mb-0 md:mr-8">
+        <p class="text-black/80 max-w-2xl">Seabreeze are an accredited Royal Yachting Association's (RYA) member, ensuring training adheres to standards for safety, competence, and quality</p>
+      </div>
+      <Image src={ryaLogo} alt="RYA accredited centre" class="max-w-sm h-auto" />
+    </div>
+  </div>
+</section>
